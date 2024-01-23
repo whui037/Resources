@@ -1166,7 +1166,6 @@ DOMAIN,iadmusicmatvideo.music.126.net, reject
 DOMAIN,impservice.dictapp.youdao.com, reject
 DOMAIN,impservice.youdao.com, reject
 DOMAIN,n.3g.163.com, reject
-DOMAIN,nex.163.com, reject
 DOMAIN,yt-adp.nosdn.127.net, reject
 DOMAIN,yt-adp.ws.126.net, reject
 # > 网易云
@@ -9359,7 +9358,6 @@ DOMAIN-SUFFIX,impservice.youdao.com, reject
 DOMAIN-SUFFIX,log.yex.youdao.com, reject
 DOMAIN-SUFFIX,log-yex.youdao.com, reject
 DOMAIN-SUFFIX,n.3g.163.com, reject
-DOMAIN-SUFFIX,nex.163.com, reject
 DOMAIN-SUFFIX,yt-adp.nosdn.127.net, reject
 DOMAIN-SUFFIX,ads.aplus.pptv.com, reject
 DOMAIN-SUFFIX,ads.aplusapi.pptv.com, reject
@@ -9861,5 +9859,4 @@ DOMAIN-SUFFIX,zoomanalytics.co, reject
 DOMAIN-SUFFIX,ads.linkedin.com, reject
 DOMAIN,analytics.slashdotmedia.com, reject
 DOMAIN,zgsdk.zhugeio.com, reject
-
 
