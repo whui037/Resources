@@ -759,7 +759,6 @@ DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com, reject
 # > TubeMax  感谢@可莉分享
 DOMAIN-suffix, adjust.com, reject
 DOMAIN-suffix, applvn.com, reject
-DOMAIN-suffix, app-measurement.com, reject
 DOMAIN-suffix, pangle.io, reject
 DOMAIN-suffix, applovin.com, reject
 DOMAIN-suffix, appier.net, reject
@@ -9507,7 +9506,6 @@ DOMAIN-SUFFIX,zlne800.com, reject
 DOMAIN-SUFFIX,zunmi.cn, reject
 DOMAIN-SUFFIX,zzd6.com, reject
 DOMAIN-SUFFIX,mackeeper.com, reject
-DOMAIN-SUFFIX,app-measurement.com, reject
 DOMAIN-SUFFIX,mob.com, reject
 DOMAIN-SUFFIX,api.joybj.com, reject
 DOMAIN-SUFFIX,api.whizzone.com, reject
