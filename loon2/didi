@@ -5,7 +5,7 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
 [URL Rewrite]
-^https:\/\/hd\.xiaojukeji\.com\/d url reject-dict
+^https:\/\/hd\.xiaojukeji\.com\/d reject-dict
 [Script]
 ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 ^https:\/\/daijia\.kuaidadi\.com\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
