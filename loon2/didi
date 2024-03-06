@@ -7,16 +7,16 @@
 [URL Rewrite]
 ^https:\/\/hd\.xiaojukeji\.com\/d reject-200
 [Script]
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/daijia\.kuaidadi\.com\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/freight\.xiaojukeji\.com\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/daijia\.kuaidadi\.com:443\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/daijia\.kuaidadi\.com\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/freight\.xiaojukeji\.com\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/daijia\.kuaidadi\.com:443\/gateway requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 
 [MITM]
 hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn
