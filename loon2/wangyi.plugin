@@ -1,8 +1,6 @@
-#!name = 滴滴出行
-#!author = 怎么肥事
+#!name = 网易大全
+#!author = xd
 #!update = 2024-02-12 19:42
-#! ps = 需要分流禁用掉 gwp.xiaojukeji.com
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
 [URL Rewrite]
 # > 网易新闻
