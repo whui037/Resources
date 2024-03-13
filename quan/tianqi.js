@@ -23,8 +23,8 @@ $httpClient.get(apiUrl, (error, response, data) => {
     title: "今日天气",
     content: message,
     cityId:cityId,
-    icon: sun.max.fill,
-    "icon-color": #ffc400
+    icon: 'sun.max.fill',
+    "icon-color": '#ffc400'
   };
   $done(body);
 });
