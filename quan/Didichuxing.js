@@ -38,26 +38,7 @@ if (obj.data && obj.data.disorder_cards && obj.data.disorder_cards.top_banner_ca
  }
 }
 
-if (url.includes("/usercenter")) {
-  const excludedTitles = ['天天领福利', '金融服务', '更多服务', '企业服务', '安全中心'];
-
-  if (obj.data && obj.data.cards) {
-    obj.data.cards = obj.data.cards.filter(card => !excludedTitles.includes(card.title));
-
-    obj.data.cards.forEach(card => {
-      if (card.tag === "wallet") {
-        if (card.items) {
-          card.items = card.items.filter(item => item.title === "优惠券");
-        }
-        if (card.card_type === 4 && card.bottom_items) {
-          card.bottom_items = card.bottom_items.filter(item => 
-            item.title === "省钱套餐" || item.title === "天天神券"
-          );
-        }
-      }
-    });
-  }
-} else if (body.includes("天天领福利")) {
+if (body.includes("天天领福利")) {
   delete obj.data;
 }
 
