@@ -58,7 +58,7 @@ if (url.includes("/usercenter")) {
   }
 }
 
-if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/homepage/v1/other/fast") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")) {
+if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/other/fast") || url.includes("/other/slow") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")) {
   delete obj.data;
 }
 
