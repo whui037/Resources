@@ -3,6 +3,7 @@ const url = $request.url;
 if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
+let body = $response.body
 
 if (url.includes("/other/pGetSceneList")) {
   if (obj && obj.data && obj.data.scene_list instanceof Array) {
