@@ -56,6 +56,8 @@ if (url.includes("/usercenter")) {
       }
     });
   }
+} else if (body.includes("天天领福利")) {
+  delete obj.data;
 }
 
 if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/other/fast") || url.includes("/other/slow") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")) {
