@@ -1,0 +1,167 @@
+name: 滴滴出行
+description: Didichuxing
+author: 怎么肥事
+dns: {}
+rules:
+- ip_cidr:
+    match: 139.199.244.6/32
+    policy: REJECT
+- ip_cidr:
+    match: 113.46.225.9/32
+    policy: REJECT
+- ip_cidr:
+    match: 139.199.244.7/32
+    policy: REJECT
+- ip_cidr:
+    match: 113.46.225.8/32
+    policy: REJECT
+- ip_cidr:
+    match: 123.207.209.39/32
+    policy: REJECT
+- ip_cidr:
+    match: 123.207.209.60/32
+    policy: REJECT
+- ip_cidr:
+    match: 139.199.240.15/32
+    policy: REJECT
+- ip_cidr:
+    match: 139.199.240.12/32
+    policy: REJECT
+- ip_cidr:
+    match: 116.85.3.37/32
+    policy: REJECT
+- domain:
+    match: gwp.xiaojukeji.com
+    policy: REJECT
+- ip_cidr:
+    match: 162.14.157.2/32
+    policy: REJECT
+- ip_cidr:
+    match: 162.14.157.24/32
+    policy: REJECT
+- ip_cidr:
+    match: 116.85.1.0/32
+    policy: REJECT
+- ip_cidr:
+    match: 116.85.1.17/32
+    policy: REJECT
+- ip_cidr:
+    match: 116.85.1.22/32
+    policy: REJECT
+- ip_cidr:
+    match: 116.85.3.25/32
+    policy: REJECT
+body_rewrites:
+- response_jq:
+    match: ^https:\/\/mapi\.xiaojukeji\.com\/passenger-wallet\/api\/v6\/wallet\/homepage
+    filter: del(.data.cardList[0].detailData.myCreditLimit, .data.cardList[0].detailData.discountList[3], .data.cardList[0].detailData.discountList[4], .data.cardList[1], .data.cardList[2], .data.cardList[3], .data.cardList[4], .data.cardList[5], .data.cardList[6], .data.cardList[7], .data.cardList[8], .data.cardList[9])
+- response_jq:
+    match: ^https:\/\/goblin\.hupu\.com\/d\/d\.d\.d+\/interfaceAd\/getOther\/v3
+    filter: .ad_code = 0
+map_locals:
+- match: ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/getMulti\?
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/freight\.xiaojukeji\.com\/gateway
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/daijia\.kuaidadi\.com:443\/gateway
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+- match: ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{}'
+scriptings:
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/api\.udache\.com\/gulfstream\/pre-sale\/v1\/other\/pGetSceneList
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/conf\.diditaxi\.com\.cn\/ota\/na\/yuantu\/infoList
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Didichuxing
+    match: ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/oversea\/layout
+    script_url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+    timeout: 60
+    body_required: true
+mitm:
+  hostnames:
+    includes:
+    - 113.46.225.*
+    - common.diditaxi.com.cn
+    - freight.xiaojukeji.com
+    - daijia.kuaidadi.com
+    - 162.14.157.*
+    - ct.xiaojukeji.com
+    - res.xiaojukeji.com
+    - conf.diditaxi.com.cn
+    - api.udache.com
+    - 123.207.209.*
+    - 112.53.55.225
+    - 120.241.142.*
+    - 120.241.143.*
+    - 116.85.*
+    - 139.199.240.84
